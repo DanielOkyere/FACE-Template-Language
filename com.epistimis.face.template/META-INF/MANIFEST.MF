@@ -8,5 +8,22 @@ Bundle-SymbolicName: com.epistimis.face.template; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.xbase,
- org.eclipse.equinox.common;bundle-version="3.5.0"
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: com.epistimis.face.template.template,
+ com.epistimis.face.template.generator,
+ com.epistimis.face.template.services,
+ com.epistimis.face.template.template.util,
+ com.epistimis.face.template.serializer,
+ com.epistimis.face.template.scoping,
+ com.epistimis.face.template.validation,
+ com.epistimis.face.template.template.impl,
+ com.epistimis.face.template.parser.antlr.internal,
+ com.epistimis.face.template,
+ com.epistimis.face.template.parser.antlr
+Import-Package: org.apache.log4j
