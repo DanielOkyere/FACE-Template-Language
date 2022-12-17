@@ -1,0 +1,3 @@
+include 'com.epistimis.face.template'
+include 'com.epistimis.face.template.ide'
+include 'com.epistimis.face.template.tests'
