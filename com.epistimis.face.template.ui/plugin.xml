@@ -431,4 +431,61 @@
 			type="text">
 		</fileTypes>
 	</extension>
+	<extension
+		point="org.eclipse.ui.newWizards">
+		<category id="com.epistimis.face.template.ui.category" name="Template">
+		</category>
+		<wizard
+			category="com.epistimis.face.template.ui.category"
+			class="com.epistimis.face.template.ui.TemplateExecutableExtensionFactory:org.eclipse.xtext.ui.wizard.template.TemplateNewProjectWizard"
+			id="com.epistimis.face.template.ui.wizard.TemplateNewProjectWizard"
+			name="Template Project"
+			icon="icons/new_Template_proj.gif"
+			project="true">
+		</wizard>
+	</extension>
+	<extension
+		point="org.eclipse.xtext.ui.projectTemplate">
+		<projectTemplateProvider
+			class="com.epistimis.face.template.ui.TemplateExecutableExtensionFactory:com.epistimis.face.template.ui.wizard.TemplateProjectTemplateProvider"
+			grammarName="com.epistimis.face.template.Template">
+		</projectTemplateProvider>
+	</extension>
+	<extension
+		point="org.eclipse.ui.perspectiveExtensions">
+		<perspectiveExtension targetID="org.eclipse.ui.resourcePerspective">
+			<newWizardShortcut id="com.epistimis.face.template.ui.wizard.TemplateNewProjectWizard"/>
+		</perspectiveExtension>
+		<perspectiveExtension targetID="org.eclipse.jdt.ui.JavaPerspective">
+			<newWizardShortcut id="com.epistimis.face.template.ui.wizard.TemplateNewProjectWizard"/>
+		</perspectiveExtension>
+	</extension>
+	<extension
+		point="org.eclipse.ui.newWizards">
+		<category id="com.epistimis.face.template.ui.category" name="Template">
+		</category>
+		<wizard
+			category="com.epistimis.face.template.ui.category"
+			class="com.epistimis.face.template.ui.TemplateExecutableExtensionFactory:org.eclipse.xtext.ui.wizard.template.TemplateNewFileWizard"
+			id="com.epistimis.face.template.ui.wizard.TemplateNewFileWizard"
+			name="Template File"
+			icon="icons/new_Template_file.png">
+		</wizard>
+	</extension>
+	<extension
+		point="org.eclipse.xtext.ui.fileTemplate">
+		<fileTemplateProvider
+			class="com.epistimis.face.template.ui.TemplateExecutableExtensionFactory:com.epistimis.face.template.ui.wizard.TemplateFileTemplateProvider"
+			grammarName="com.epistimis.face.template.Template">
+		</fileTemplateProvider>
+	</extension>
+	<extension
+		point="org.eclipse.ui.perspectiveExtensions">
+		<perspectiveExtension targetID="org.eclipse.ui.resourcePerspective">
+			<newWizardShortcut id="com.epistimis.face.template.ui.wizard.TemplateNewFileWizard"/>
+		</perspectiveExtension>
+		<perspectiveExtension targetID="org.eclipse.jdt.ui.JavaPerspective">
+			<newWizardShortcut id="com.epistimis.face.template.ui.wizard.TemplateNewFileWizard"/>
+		</perspectiveExtension>
+	</extension>
 </plugin>
