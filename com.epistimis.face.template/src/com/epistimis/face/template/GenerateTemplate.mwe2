@@ -34,9 +34,9 @@ Workflow {
 			name = "com.epistimis.face.template.Template"
 			fileExtensions = "template"
 
-//		    fragment = io.typefox.xtext2langium.Xtext2LangiumFragment {
-//		        outputPath = './langium'
-//		    }
+		    fragment = io.typefox.xtext2langium.Xtext2LangiumFragment {
+		        outputPath = './langium'
+		    }
 			serializer = {
 				generateStub = false
 			}
